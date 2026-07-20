@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harisraj G | Cybersecurity Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0a0f1d;
+            --surface-color: #131c31;
+            --accent-color: #00ffaa;
+            --text-main: #ffffff;
+            --text-muted: #8fa0dd;
+            --border-color: #223153;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            padding: 60px 0 40px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 170, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Section Layout */
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            height: 100%;
+        }
+
+        /* Skills Lists */
+        .skills-group {
+            margin-bottom: 15px;
+        }
+
+        .skills-group h3 {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: rgba(0, 255, 170, 0.1);
+            color: var(--accent-color);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(0, 255, 170, 0.2);
+        }
+
+        /* Achievement Media Blocks */
+        .achievement-item {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .achievement-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .media-placeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .media-box {
+            background-color: rgba(10, 15, 29, 0.5);
+            border: 2px dashed var(--border-color);
+            border-radius: 6px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .media-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .media-label {
+            z-index: 1;
+            background: rgba(19, 28, 49, 0.9);
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HERO HEADER -->
+    <header>
+        <!-- PROFILE IMAGE PLACEHOLDER -->
+        <!-- Replace "profile.jpg" with your image filename -->
+        <img src="profile.jpg" alt="Harisraj G" class="profile-img" onerror="this.style.display='none';">
+        
+        <h1>HARISRAJ G</h1>
+        <div class="subtitle">Cybersecurity Specialist & Engineer</div>
+        
+        <div class="contact-info">
+            <span>📍 PSNA College of Engineering and Technology</span>
+            <span>📧 <a href="mailto:harisrajganesan11@gmail.com">harisrajganesan11@gmail.com</a></span>
+            <span>📞 +91 90424 04948</span>
+            <span>💻 <a href="https://github.com/Pikachu-lee" target="_blank">GitHub: Pikachu-lee</a></span>
+        </div>
+    </header>
+
+    <!-- OVERVIEW & EDUCATION -->
+    <section class="grid-2">
+        <div class="card">
+            <h2>Professional Summary</h2>
+            <p>Driven Computer Science Engineering student specializing in Cybersecurity, currently in my 3rd year of academic study. Deeply engaged in threat analysis, security architectures, and competitive vulnerability exploitation. Proven track record of strategic problem-solving in live high-pressure security environments, with a primary focus on evolving alongside modern attack surfaces and cryptographic complexities.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Core Competencies</h2>
+            
+            <div class="skills-group">
+                <h3>Programming Languages</h3>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Java</span>
+                </div>
+            </div>
+
+            <div class="skills-group" style="margin-top: 20px;">
+                <h3>Languages</h3>
+                <div class="tags">
+                    <span class="tag">English</span>
+                    <span class="tag">Tamil</span>
+                    <span class="tag">Kannada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPETITIVE PERFORMANCE & ACHIEVEMENTS -->
+    <section>
+        <h2>Technical Competitions & Achievements</h2>
+        
+        <!-- Live Achievements Summary -->
+        <p style="color: var(--text-muted); margin-bottom: 25px;">
+            Active participant in cross-regional offensive and defensive cybersecurity simulation challenges (CTFs). Demonstrated analytical skills across 3 comprehensive offline events and more than 5 global online installations.
+        </p>
+
+        <!-- FIRST PLACE WIN 1 -->
+        <div class="achievement-item">
+            <div class="achievement-header">
+                <div>
+                    <h3>Offline Security Championship — Event I</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Live Technical Evaluation & Vulnerability Exploitation</p>
+                </div>
+                <span class="badge">1st Place Winner</span>
+            </div>
+            <p>Secured top honors by managing full-stack security infrastructure and resolving time-sensitive algorithmic challenges within a team framework.</p>
+            
+            <div class="media-placeholder-grid">
+                <!-- Drop certificate image below by replacing "cert1.jpg" -->
+                <div class="media-box">
+                    <img src="cert1.jpg" alt="Winning Certificate" onerror="this.style.opacity=0;">
+                    <div class="media-label">Certificate Image Placeholder</div>
+                </div>
+                <!-- Drop cash prize/award image below by replacing "prize1.jpg" -->
+                <div class="media-box">
+                    <img src="prize1.jpg" alt="Award Ceremony" onerror="this.style.opacity=0;">
+                    <div class="media-label">Award / Cash Prize Photo</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIRST PLACE WIN 2 -->
+        <div class="achievement-item">
+            <div class="achievement-header">
+                <div>
+                    <h3>Offline Security Championship — Event II</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Advanced Attack-Defense Simulation</p>
+                </div>
+                <span class="badge">1st Place Winner</span>
+            </div>
+            <p>Successfully achieved first place by deploying high-velocity diagnostic testing and penetration protocols against engineered targets.</p>
+            
+            <div class="media-placeholder-grid">
+                <!-- Drop certificate image below by replacing "cert2.jpg" -->
+                <div class="media-box">
+                    <img src="cert2.jpg" alt="Winning Certificate" onerror="this.style.opacity=0;">
+                    <div class="media-label">Certificate Image Placeholder</div>
+                </div>
+                <!-- Drop cash prize/award image below by replacing "prize2.jpg" -->
+                <div class="media-box">
+                    <img src="prize2.jpg" alt="Award Ceremony" onerror="this.style.opacity=0;">
+                    <div class="media-label">Award / Cash Prize Photo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
